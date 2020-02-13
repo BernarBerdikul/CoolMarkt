@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %} {{current_rubric.name}} - Anschlagtafel {% endblock %}
+
+{% block content %}
+    <h2 align="center">Rubrik: {{current_rubric.name}} </h2>
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+          <div class="row portfolio-container">
+    {% for bb in bbs %}
+        <div class="col-lg-4 col-md-6 filter-{{bb.rubric}}">
+                <h2><a href="{% url 'business:show_bb' bb.id %}">{{bb.title}}</a></h2>
+                <p>{{bb.content|linebreaks}}</p>
+                <h2>Preis: {{bb.price}} KZT</h2>
+                <p><a href="{% url 'business:by_rubric' bb.rubric.id %}">{{bb.rubric.name}}</a></p>
+                <p>{{bb.published|date:"d.m.Y H:i:s"}}</p>
+
+                <div class="portfolio-item">
+                  <img src="{{ MEDIA_URL }}{{bb.image.url}}" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                      <h3><a href="{{ MEDIA_URL }}{{bb.image.url}}" data-gall="portfolioGallery" class="venobox" title="ZOOM">ZOOM</a></h3>
+                      <a href="{{ MEDIA_URL }}{{bb.image.url}}" data-gall="portfolioGallery" class="venobox" title="ZOOM"><i class="icofont-plus"></i></a>
+                  </div>
+                </div>
+        </div>
+    {% endfor %}
+          </div>
+      </div>
+    </section><!-- End Our Portfolio Section -->
+{% endblock %}

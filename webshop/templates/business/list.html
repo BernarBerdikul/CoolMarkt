@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block linken %}
+    <li><a href="#about">Uber Uns</a></li>
+    <li><a href="#portfolio">Waren</a></li>
+    <li><a href="#team">Team</a></li>
+{% endblock %}
+{% block content %}
+    <!-- ======= Our Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="section-title">
+          <h2>Unsere Waren</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+
+              {% for rubric in rubrics %}
+                <li data-filter=".filter-{{rubric.name}}">{{rubric.name}}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="row portfolio-container">
+
+    {% for bb in bbs %}
+            <div class="col-lg-4 col-md-6 filter-{{bb.rubric}}">
+                <h2>{{bb.title}}</h2>
+                <p>{{bb.content|linebreaks}}</p>
+                <h2>Preis: {{bb.price}} KZT</h2>
+                <p><a href="{% url 'business:by_rubric' bb.rubric.id %}">{{bb.rubric.name}}</a></p>
+                <p>{{bb.published|date:"d.m.Y H:i:s"}}</p>
+
+                <div class="portfolio-item">
+                  <img src="{{ MEDIA_URL }}{{bb.image.url}}" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                      <h3><a href="{{ MEDIA_URL }}{{bb.image.url}}" data-gall="portfolioGallery" class="venobox" title="ZOOM">ZOOM</a></h3>
+                      <a href="{{ MEDIA_URL }}{{bb.image.url}}" data-gall="portfolioGallery" class="venobox" title="ZOOM"><i class="icofont-plus"></i></a>
+                  </div>
+                </div>
+            </div>
+    {% endfor %}
+        </div>
+      </div>
+    </section><!-- End Our Portfolio Section -->
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>Uber Uns</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2">
+            <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
+            <h3>Wir sind CoolMarkT, ein kreatives Geschäft, das gerne verkauft, zusammenarbeitet und kreiert.</h3>
+            <p>
+              Hallo! Wir sind Bernar Berdikul und Mark Sklyomin, zwei Studenten mit einer Leidenschaft für Weiterverkauf - Weiterverkauf macht uns glücklich. Wir glauben fest an die transformative Kraft von Illustration und Design und an ihre Fähigkeit, die Kommunikation zu vereinfachen, Erfahrungen zu steigern, Menschen überall einzubeziehen und zu inspirieren. Gutes Design und gute Beziehungen entstehen durch Zusammenarbeit. Wir freuen uns darauf, einen visuellen Dialog zu beginnen, Sie kennenzulernen und gemeinsam etwas Schönes zu schaffen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Our Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+        <div class="section-title">
+          <h2>Unseres Team</h2>
+          <p>Unser Team hat eine große Anzahl von Leuten, aber sehen Sie sich die beiden gutaussehenden Männer unten an, verdienen sie nicht besondere Aufmerksamkeit?</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="{% static 'assets/img/team/Bernar.jpeg' %}" alt="">
+              <h4>Bernar Berdikul</h4>
+              <span>Founder & Chief Executive officer</span>
+              <p>
+               Bernar Berdikul ist der Gründer und CEO von CoolMarkT, das er 2020 von seinem Schlafsaal aus gegründet hat. In den Anfangsjahren des Unternehmens fungierte Bernar als einziger Ingenieur, Designer und Support-Vertreter für die gesamte CoolMarkT-Plattform.
+              </p>
+              <div class="social">
+                <a href="https://m.facebook.com/bernar.berdicool?refid=7"><i class="icofont-facebook"></i></a>
+                <a href="https://www.instagram.com/bernarberdicool/saved/?hl=ru"><i class="icofont-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="{% static 'assets/img/team/Mark.jpeg' %}" alt="">
+              <h4>Mark Sklyomin</h4>
+              <span>Chief Financial Officer & Chief Operating Officer</span>
+              <p>
+                Mark bringt 2 Monate Erfahrung in den CoolMarkT-Bereich ein, um neue Unternehmen aufzubauen und bestehende Geschäftsmodelle zu transformieren. Zuletzt war Mark 2 Jahre in verschiedenen operativen und finanziellen Führungspositionen in den IBM-Organisationen für Cloud Computing, Global Services und Software tätig.
+              </p>
+              <div class="social">
+                <a href="https://instagram.com/26.mvrk?igshid=18pt9t3ufg14i"><i class="icofont-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Our Team Section -->
+{% endblock %}
+
