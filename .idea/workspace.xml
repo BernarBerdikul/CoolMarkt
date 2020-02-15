@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c08726db-0642-4aec-b976-0381034d85e4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/supervisor/webshop.conf" beforeDir="false" afterPath="$PROJECT_DIR$/configs/supervisor/webshop.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gunicorn_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/gunicorn_config.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
