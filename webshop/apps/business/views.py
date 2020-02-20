@@ -6,6 +6,7 @@ from .forms import BbForm, UserMessageForm
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect, HttpResponse
 
+
 class BbCreateView(CreateView):
     template_name = 'business/create.html'
     form_class = BbForm

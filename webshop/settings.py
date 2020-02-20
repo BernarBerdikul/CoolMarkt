@@ -16,7 +16,7 @@ SECRET_KEY = 'kup9=43)pc9y07+y!0t=ra6*55*v#h0483wjtd3@*)yzmm9=k3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 #178.170.221.149
-ALLOWED_HOSTS = ['178.170.221.149']
+ALLOWED_HOSTS = ['178.170.221.149','127.0.0.1']
 
 # Application definition
 
@@ -106,10 +106,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+STATIC_ROOT = '/root/code/CoolMarkt/webshop/static/'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
+    os.path.join(PROJECT_ROOT, "static"),
     'Webshop/static',
 ]
 
