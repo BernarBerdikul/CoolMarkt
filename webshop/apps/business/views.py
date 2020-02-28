@@ -1,11 +1,33 @@
 from builtins import super
 from django.shortcuts import render
-from .models import Bb, Rubric
+from .models import Bb, Rubric, UserMessage
 from django.views.generic.edit import CreateView
+from django.core.mail import send_mail, EmailMessage
 from .forms import BbForm, UserMessageForm
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect, HttpResponse
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from .serializers import BbSerializer, RubricSerializer
+from .tasks import sleepy, send_email_task
 
+class BbView(APIView):
+    def get(self, request):
+        content = Bb.objects.all()
+        serializer = BbSerializer(content, many=True)
+        context = {
+            'content': serializer.data,
+        }
+        return Response(context)
+
+class RubricView(APIView):
+    def get(self, request):
+        rubrics = Rubric.objects.all()
+        serializer = RubricSerializer(rubrics, many=True)
+        context = {
+            'rubrics': serializer.data,
+        }
+        return Response(context)
 
 class BbCreateView(CreateView):
     template_name = 'business/create.html'
@@ -22,13 +44,23 @@ def send_message(request):
     if request.method == 'POST':
         form = UserMessageForm(request.POST)
         if form.is_valid():
-            '''brief = create(
-                user_name=request.POST['user_name'],
-                email=request.POST['email'],
-                subject=request.POST['subject'],
-                message=request.POST['message'],
-            )'''
-            form.save()
+            user_message = form.save()
+            '''
+            user_name = request.POST.get('user_name', '')
+            email = request.POST.get('email', '')
+            subject = request.POST.get('subject', '')
+            message = request.POST.get('message', '')
+
+            send_mail(
+                user_name + " : " + email,
+                subject + " : " + message,
+                send_from,
+                ['bernar.berdikul@mail.ru'],
+                fail_silently=False,
+            )
+            '''
+            sleepy.delay(20)
+            send_email_task.delay(user_message.id)
             return HttpResponseRedirect(reverse('business:index'))
         else:
             return HttpResponse('<h1>Form nicht ausgefüllt</h1>')

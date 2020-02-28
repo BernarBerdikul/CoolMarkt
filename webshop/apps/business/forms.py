@@ -1,5 +1,6 @@
 from django.forms import ModelForm
 from .models import Bb, UserMessage
+from django import forms
 
 
 class BbForm(ModelForm):

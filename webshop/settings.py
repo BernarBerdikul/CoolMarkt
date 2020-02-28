@@ -15,8 +15,8 @@ SECRET_KEY = 'kup9=43)pc9y07+y!0t=ra6*55*v#h0483wjtd3@*)yzmm9=k3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-#178.170.221.149
-ALLOWED_HOSTS = ['178.170.221.149','127.0.0.1']
+
+ALLOWED_HOSTS = ['178.170.221.149', '127.0.0.1']
 
 # Application definition
 
@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'business.apps.BusinessConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -114,8 +115,26 @@ STATICFILES_DIRS = [
     'webshop/static',
 ]
 
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+]
+
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, "media")
 MEDIA_URL = '/media/'
 
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/list/'
+
+CELERY_BROKER_URL = 'amqp://localhost'
+
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'DaBEERman32215@gmail.com'
+EMAIL_HOST_PASSWORD = 'kapibaraMYpromise987412365'

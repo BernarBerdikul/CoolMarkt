@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c08726db-0642-4aec-b976-0381034d85e4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop/apps/business/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/apps/business/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop/apps/business/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/apps/business/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop/apps/business/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/apps/business/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop/templates/business/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/templates/business/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop/templates/business/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/templates/business/list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -26,20 +35,20 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/webshop/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Bernar\PycharmProjects\WebShop\webshop\webshop\templates" />
-      <recent name="C:\Users\Bernar\PycharmProjects\WebShop\webshop\business\migrations" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Bernar\PycharmProjects\WebShop\webshop\webshop" />
       <recent name="C:\Users\Bernar\PycharmProjects\WebShop\webshop" />
       <recent name="C:\Users\Bernar\PycharmProjects\WebShop\webshop\webshop\templates\business" />
       <recent name="C:\Users\Bernar\PycharmProjects\WebShop\webshop\webshop\templates" />
       <recent name="C:\Users\Bernar\PycharmProjects\WebShop\webshop\webshop\templates\registration" />
-      <recent name="C:\Users\Bernar\PycharmProjects\WebShop\webshop\webshop\static\business" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Bernar\PycharmProjects\WebShop\webshop\webshop\templates" />
+      <recent name="C:\Users\Bernar\PycharmProjects\WebShop\webshop\business\migrations" />
     </key>
   </component>
   <component name="RunDashboard">

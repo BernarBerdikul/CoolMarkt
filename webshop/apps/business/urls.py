@@ -1,10 +1,11 @@
 from django.urls import path, include
 from . import views
-from .views import BbCreateView
+from .views import BbCreateView, BbView, RubricView
 from django.contrib.auth.views import LoginView, LogoutView
 
 
 app_name = 'business'
+
 
 urlpatterns = [
     path('list/', views.index, name='index'),
@@ -15,4 +16,6 @@ urlpatterns = [
     path('', LoginView.as_view(), name='login'),
     path('accounts/logout/', LogoutView.as_view(), name='logout'),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('api/bb', BbView.as_view(), name='bb'),
+    path('api/rubrics', RubricView.as_view(), name='rubrics'),
 ]

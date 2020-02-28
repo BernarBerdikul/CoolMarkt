@@ -40,8 +40,8 @@
               {% for rubric in rubrics %}
                   <li><a href="{% url 'business:by_rubric' rubric.pk %}">{{ rubric.name }}</a></li>
               {% endfor %}
-              <!--<li><a href="{% url 'business:add' %}">Addieren</a></li>
-              <li><a href="{% url 'business:login' %}">Login</a></li>
+              <li><a href="{% url 'business:add' %}">Addieren</a></li>
+              <!--<li><a href="{% url 'business:login' %}">Login</a></li>
               <li><a href="{% url 'business:logout' %}">Logout</a></li>-->
             </ul>
           </nav><!-- .nav-menu -->
