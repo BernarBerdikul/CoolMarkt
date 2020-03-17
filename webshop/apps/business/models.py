@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class UserMessage(models.Model):
     user_name = models.CharField(max_length=50, verbose_name='Name')
     email = models.EmailField(null=True, blank=True, verbose_name='Email')
@@ -12,6 +13,7 @@ class UserMessage(models.Model):
     class Meta:
         verbose_name = 'Brief'
         verbose_name_plural = 'Briefe'
+
 
 class Rubric(models.Model):
     name = models.CharField(max_length=50, db_index=True, verbose_name='Name')

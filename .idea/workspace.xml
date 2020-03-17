@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c08726db-0642-4aec-b976-0381034d85e4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop/apps/business/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/apps/business/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop/apps/business/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/apps/business/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop/apps/business/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/apps/business/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop/templates/business/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/templates/business/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop/templates/business/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/templates/business/list.html" afterDir="false" />
-    </list>
+    <list default="true" id="c08726db-0642-4aec-b976-0381034d85e4" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +24,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../BernarApi/myApi" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
