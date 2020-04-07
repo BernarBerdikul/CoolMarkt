@@ -23,6 +23,7 @@
     <link type="text/css" href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 </head>
 <body>
+  <div id="like_button_container"></div>
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
         <div class="container">
@@ -162,5 +163,10 @@
   <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
   <!-- Template Main JS File -->
   <script src="{% static '/assets/js/main.js' %}"></script>
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Загрузим наш React-компонент. -->
+  <script src="like_button.js"></script>
 </body>
 </html>
