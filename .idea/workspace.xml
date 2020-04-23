@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c08726db-0642-4aec-b976-0381034d85e4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,5 +73,23 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="22" key="#Inspections" timestamp="1587660499573">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1587660499573" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1586547438637">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586547438637" />
+    <state x="184" y="6" key="SettingsEditor" timestamp="1586547443972">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586547443972" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1586336895818">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586336895818" />
   </component>
 </project>
