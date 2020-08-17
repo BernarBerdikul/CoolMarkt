@@ -11,6 +11,7 @@ from rest_framework.views import APIView
 from .serializers import BbSerializer, RubricSerializer
 from .tasks import sleepy, send_email_task
 
+
 class BbView(APIView):
     def get(self, request):
         content = Bb.objects.all()
@@ -20,6 +21,7 @@ class BbView(APIView):
         }
         return Response(context)
 
+
 class RubricView(APIView):
     def get(self, request):
         rubrics = Rubric.objects.all()
@@ -28,6 +30,7 @@ class RubricView(APIView):
             'rubrics': serializer.data,
         }
         return Response(context)
+
 
 class BbCreateView(CreateView):
     template_name = 'business/create.html'
@@ -45,20 +48,6 @@ def send_message(request):
         form = UserMessageForm(request.POST)
         if form.is_valid():
             user_message = form.save()
-            '''
-            user_name = request.POST.get('user_name', '')
-            email = request.POST.get('email', '')
-            subject = request.POST.get('subject', '')
-            message = request.POST.get('message', '')
-
-            send_mail(
-                user_name + " : " + email,
-                subject + " : " + message,
-                send_from,
-                ['bernar.berdikul@mail.ru'],
-                fail_silently=False,
-            )
-            '''
             sleepy.delay(20)
             send_email_task.delay(user_message.id)
             return HttpResponseRedirect(reverse('business:index'))

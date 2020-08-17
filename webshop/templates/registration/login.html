@@ -1,17 +1,43 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% load staticfiles %}
+<head>
+    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+    <title>Login</title>
 
-{% block title %} Login {% endblock %}
-
-{% block content %}
-    <h2>Login</h2>
-    {% if user.is_authenticated %}
-        <p>Sie sind bereits eingeloggt</p>
-    {% else %}
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="hidden" name="next" value="{{ next }}">
-            <input type="submit" value="Login">
-        </form>
-    {% endif %}
-{% endblock %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link type="text/css" href="{% static 'login.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <form class="form-horizontal" method="post">
+                    {% csrf_token %}
+                    <span class="heading">Login</span>
+                    <p>Вы уже зашли</p>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Username">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="form-group help">
+                        <input type="password" class="form-control" placeholder="Password">
+                        <i class="fa fa-lock"></i>
+                        <a href="{% url 'business:index' %}" class="fa fa-question-circle"></a>
+                    </div>
+                    <div class="form-group">
+                        <div class="main-checkbox">
+                            <input type="checkbox" value="{{ next }}" id="checkbox1" name="next"/>
+                            <label for="checkbox1"></label>
+                        </div>
+                        <span class="text">Запомнить</span>
+                        <button rel="{% url 'business:index' %}" type="submit" class="btn btn-default" value="Login">Login</button>>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</body>
+</html>
